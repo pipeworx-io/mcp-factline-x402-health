@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-factline-x402-health",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "factline-x402-health -- x402 seller and facilitator health.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-factline-x402-health": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "factline-x402-health"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-factline-x402-health.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/factline-x402-health",
   "pipeworx": {
-    "sourceHash": "v1-de832e0b2561bb79556777af88060d7a474c7adc205052716d0e1cb46127d624",
-    "sourceCommit": "f54ad77e789f27fe393978f9c080b5b18c87bb4f"
+    "mode": "gateway",
+    "slug": "factline-x402-health",
+    "gatewaySlug": "factline-x402-health",
+    "sourceHash": "v1-bec27d3a8c3d3df4c04c3e260bace4d40705e11e7f71b826dff73076dbb246cb",
+    "sourceCommit": "305e2cd138cb71158e9c1e664ea0e6739bd40801"
   }
 }
