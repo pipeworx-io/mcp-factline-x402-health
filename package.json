@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-factline-x402-health",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "factline-x402-health -- x402 seller and facilitator health.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "factline-x402-health",
     "gatewaySlug": "factline-x402-health",
-    "sourceHash": "v1-bec27d3a8c3d3df4c04c3e260bace4d40705e11e7f71b826dff73076dbb246cb",
-    "sourceCommit": "305e2cd138cb71158e9c1e664ea0e6739bd40801"
+    "sourceHash": "v1-ac54b28680dbe42ec6758b9dc4c5812a2ce49d608ffae18cc2262f89a226bfa8",
+    "sourceCommit": "d35e32c1ffe988e24d391dedb35666387fd2b3d6"
   }
 }

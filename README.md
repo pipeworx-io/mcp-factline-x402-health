@@ -2,15 +2,15 @@
 
 Health of x402 sellers and facilitators: Factline's nightly seller probes and hourly facilitator probes, proxied live per request.
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1858+ live data sources. This is an independent, unofficial integration — not affiliated with, endorsed by, or published by the upstream provider.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1864+ live data sources. This is an independent, unofficial integration — not affiliated with, endorsed by, or published by the upstream provider.
 
 ## Tools
 
 - `x402_facilitator_health(facilitator?)` -- all tracked x402 facilitators with current status (up/down/unknown), 7-day uptime, latency and supported networks, or one by id, name or URL. Refreshes hourly.
-- `x402_seller_health(query?, tag?, network?, limit?)` -- x402 sellers ranked by 30-day payers, each with a health reading (healthy/degraded/unhealthy/insufficient_data/unprobed) from nightly probes. At most 100 per call; narrow with query, tag or network to reach the rest.
+- `x402_seller_health(query?, tag?, network?, limit?)` -- x402 sellers ranked by 30-day payers, each with a health reading (healthy/degraded/unhealthy/insufficient_data/unprobed) from nightly probes. Covers the full tracked index (about 1,000 sellers today); raise `limit` past the default 25 to reach further down the ranking, or narrow with query, tag or network.
 - `x402_seller_lookup(origin)` -- one seller by origin, host or URL: per-day probe history, uptime, listed payTo wallets, health reading. Use before paying a seller.
 
-Every response carries `source`, `cite_as`, `cadence`, `data_as_of` and `warnings`.
+Every response carries `source`, `license`, `terms`, `cite_as`, `cadence`, `data_as_of` and `warnings`.
 
 ## Auth
 
@@ -74,7 +74,7 @@ directly, instead of just this one's:
 }
 ```
 
-Both URLs reach the same gateway and the same 1858+ data sources. The
+Both URLs reach the same gateway and the same 1864+ data sources. The
 only difference is which pack's tools are listed **directly**; `ask_pipeworx`
 reaches all of them from either one.
 

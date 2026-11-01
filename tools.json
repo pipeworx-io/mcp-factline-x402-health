@@ -14,7 +14,7 @@
   },
   {
     "name": "x402_seller_health",
-    "description": "Rank/search x402 sellers with a health reading from Factline's nightly probes (does a sample endpoint still answer a valid x402 payment challenge). Covers ~1,000 sellers from public x402 catalogues but each call returns at most 100, ranked by 30-day unique payers: use \"query\", \"tag\" or \"network\" to reach the rest. An empty result (count:0) means the filter matched nothing among the tracked sellers; it is NOT evidence that anything is healthy. To check one specific seller use x402_seller_lookup. Returns source, data_as_of, origins_tracked and warnings.",
+    "description": "Rank/search x402 sellers with a health reading from Factline's nightly probes (does a sample endpoint still answer a valid x402 payment challenge). Covers the FULL tracked index (about 1,000 sellers from public x402 catalogues, ranked by 30-day unique payers) -- raise \"limit\" past the default 25 to reach further down the ranking, or narrow with \"query\", \"tag\" or \"network\". An empty result (count:0) means the filter matched nothing among the tracked sellers; it is NOT evidence that anything is healthy. To check one specific seller use x402_seller_lookup. Returns source, license, data_as_of, origins_tracked and warnings.",
     "inputSchema": {
       "type": "object",
       "properties": {
@@ -32,7 +32,7 @@
         },
         "limit": {
           "type": "number",
-          "description": "Max sellers to return, 1-100 (default 25)"
+          "description": "Max sellers to return, 1-1200 (default 25). The tracked index is under 1,100 sellers today, so a high limit reaches all of them."
         }
       }
     }

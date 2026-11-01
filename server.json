@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/factline-x402-health",
   "title": "Factline X402 Health",
   "description": "factline-x402-health -- x402 seller and facilitator health.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "websiteUrl": "https://pipeworx.io/packs/factline-x402-health",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-factline-x402-health",
